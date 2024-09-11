@@ -17,18 +17,18 @@ body {
   color: var(--font-color);
 }
 .container {
-  width: 350px;
+  width: 400px;
   margin: 0 auto;
   background-color: var(--container-bg);
 }
 .search-container {
-  width: 350px;
+  width: 400px;
   margin: 0 auto;
   background-color: var(--container-bg);
   border-radius: 9px;
 }
 .top {
-  width: 350px;
+  width: 400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@ body {
   padding: 10px 15px;
 }
 .container {
-  width: 350px;
+  width: 400px;
   margin-top: 15px;
   padding: 10px 15px;
   border-radius: 9px;
@@ -70,6 +70,9 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: var(--container-bg);
   color: var(--font-color);
+}
+i {
+  color: var(--small-text-color);
 }
 img {
   width: 80px;
@@ -106,4 +109,9 @@ h2 {
 .followers-container {
   display: flex;
   justify-content: space-evenly;
+}
+.geo-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
 }

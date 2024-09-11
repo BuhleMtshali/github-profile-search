@@ -3,6 +3,9 @@
   --bg-color: #141c30;
   --small-text-color: #0179fb;
   --container-bg: #1f2a48;
+  --light-theme-bg: #f5f8ff;
+  --light-theme-container-bg: #fefefe;
+  --light-theme-font-color: #515559;
 }
 
 body {
@@ -11,7 +14,16 @@ body {
   text-align: center;
 }
 .container {
-  width: 400px;
-  margin: 80px auto;
-  text-align: center;
+  width: 450px;
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: var(--container-bg);
+  padding: 15px;
+  color: var(--font-color);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
 }

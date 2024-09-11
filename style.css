@@ -22,7 +22,7 @@ h4 {
 }
 .container,
 .search-bar {
-  width: 580px;
+  width: 600px;
   margin: 0 auto;
   align-items: center;
   align-content: center;
@@ -33,6 +33,12 @@ h4 {
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
+}
+.container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 .header {
   width: 580px;
@@ -70,8 +76,8 @@ input[type="submit"] {
   font-size: 16px;
 }
 img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
@@ -80,13 +86,21 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
+  align-self: center;
 }
 .inner-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
 }
 h2,
-.date {
+.date,
+.text {
   margin-top: 5px;
+  text-align: left;
+}
+h2 {
+  margin-bottom: 0;
 }

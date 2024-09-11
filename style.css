@@ -14,6 +14,7 @@ body {
   font-family: "Roboto Mono", monospace;
   background-color: var(--bg-color);
   text-align: center;
+  color: var(--font-color);
 }
 h3,
 h4 {
@@ -44,12 +45,24 @@ h4 {
 }
 .search-bar {
   margin-bottom: 10px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
 }
 input[type="text"] {
   border: none;
   background-color: var(--container-bg);
+  color: var(--font-color);
+}
+input[type="submit"] {
+  color: var(--font-color);
+  background-color: var(--small-text-color);
+  padding: 5px 15px;
+  border: none;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
 }
 ::placeholder {
   color: var(--font-color);

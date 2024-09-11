@@ -7,9 +7,11 @@
   --light-theme-container-bg: #fefefe;
   --light-theme-font-color: #515559;
 }
-
+*:focus {
+  outline: none;
+}
 body {
-  font-family: "Inter Tight", sans-serif;
+  font-family: "Roboto Mono", monospace;
   background-color: var(--bg-color);
   text-align: center;
 }
@@ -17,7 +19,8 @@ h3,
 h4 {
   margin-bottom: 10px;
 }
-.container {
+.container,
+.search-bar {
   width: 450px;
   margin: 0 auto;
   align-items: center;
@@ -26,6 +29,7 @@ h4 {
   padding: 15px;
   color: var(--font-color);
   background-color: var(--container-bg);
+  border-radius: 12px;
 }
 .header {
   width: 450px;
@@ -37,4 +41,17 @@ h4 {
   align-self: center;
   padding: 5px;
   color: var(--font-color);
+}
+.search-bar {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+input[type="text"] {
+  border: none;
+  background-color: var(--container-bg);
+}
+::placeholder {
+  color: var(--font-color);
+  font-size: 16px;
 }

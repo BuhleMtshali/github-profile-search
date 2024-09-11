@@ -44,6 +44,12 @@ body {
   align-self: center;
   padding: 10px 15px;
 }
+.container {
+  width: 400px;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 9px;
+}
 input[type="search"] {
   background-color: var(--container-bg);
   border: none;
@@ -64,4 +70,12 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: var(--container-bg);
   color: var(--font-color);
+}
+img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid var(--small-text-color);
 }

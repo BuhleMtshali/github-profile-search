@@ -1,8 +1,8 @@
 :root {
-  --font-color: #c71f37;
-  --bg-color: #f2f2f2;
-  --small-text-color: #008000;
-  --container-bg: #ced4da;
+  --font-color: #a8afbf;
+  --bg-color: #141c30;
+  --small-text-color: #0179fb;
+  --container-bg: #1f2a48;
 }
 
 body {
@@ -14,77 +14,4 @@ body {
   width: 400px;
   margin: 80px auto;
   text-align: center;
-}
-h1 {
-  color: var(--font-color);
-  margin-bottom: 10px;
-}
-label {
-  display: block;
-  color: var(--small-text-color);
-  font-weight: bold;
-  font-size: 17px;
-  font-style: italic;
-  margin-bottom: 5px;
-}
-input {
-  padding: 13px 20px;
-  border-radius: 9px;
-  border: 3px solid var(--font-color);
-}
-::placeholder {
-  color: var(--small-text-color);
-  font-weight: 500;
-}
-*:focus {
-  outline: none;
-}
-input[type="submit"] {
-  color: var(--small-text-color);
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-}
-input[type="submit"]:hover {
-  background-color: var(--font-color);
-  color: var(--container-bg);
-}
-/*i {
-  color: var(--small-text-color);
-}*/
-.modal-container {
-  background-color: #c71f37;
-  width: 300px;
-  height: 250px;
-  margin: 0 auto;
-  align-items: center;
-  align-content: center;
-  color: var(--container-bg);
-}
-img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-}
-#followers,
-#following,
-#repos {
-  border-radius: 50%;
-  color: var(--bg-color);
-  width: 50px;
-  height: 50px;
-  padding: 3px;
-}
-span {
-  cursor: pointer;
-}
-.fa-screwdriver-wrench,
-.fa-user-plus {
-  color: var(--small-text-color);
-}
-.fa-link {
-  cursor: pointer;
 }

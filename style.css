@@ -50,6 +50,33 @@ input[type="submit"]:hover {
   background-color: var(--font-color);
   color: var(--container-bg);
 }
-i {
+/*i {
   color: var(--small-text-color);
+}*/
+.modal-container {
+  background-color: #c71f37;
+  width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+}
+img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+#followers,
+#following,
+#repos {
+  border-radius: 50%;
+  color: var(--bg-color);
+  width: 50px;
+  height: 50px;
+  padding: 3px;
+}
+span {
+  cursor: pointer;
 }

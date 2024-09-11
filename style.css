@@ -60,6 +60,7 @@ input[type="submit"]:hover {
   margin: 0 auto;
   align-items: center;
   align-content: center;
+  color: var(--container-bg);
 }
 img {
   width: 60px;
@@ -78,5 +79,12 @@ img {
   padding: 3px;
 }
 span {
+  cursor: pointer;
+}
+.fa-screwdriver-wrench,
+.fa-user-plus {
+  color: var(--small-text-color);
+}
+.fa-link {
   cursor: pointer;
 }

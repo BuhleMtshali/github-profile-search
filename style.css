@@ -1,3 +1,18 @@
+:root {
+  --font-color: #bd1f36;
+  --bg-color: #a5a5a5;
+  --small-text-color: #55a630;
+  --container-bg: #7d8597;
+}
+
 body {
   font-family: "Inter Tight", sans-serif;
+  background-color: var(--bg-color);
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }

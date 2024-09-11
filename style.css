@@ -22,18 +22,20 @@ h4 {
 }
 .container,
 .search-bar {
-  width: 450px;
+  width: 580px;
   margin: 0 auto;
   align-items: center;
   align-content: center;
   align-self: center;
-  padding: 15px;
+  padding: 12px;
   color: var(--font-color);
   background-color: var(--container-bg);
   border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 .header {
-  width: 450px;
+  width: 580px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -45,9 +47,8 @@ h4 {
 }
 .search-bar {
   margin-bottom: 10px;
+  width: 580px;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
 }
 input[type="text"] {
   border: none;
@@ -67,4 +68,25 @@ input[type="submit"] {
 ::placeholder {
   color: var(--font-color);
   font-size: 16px;
+}
+img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+.left-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2,
+.date {
+  margin-top: 5px;
 }

@@ -73,6 +73,7 @@ input[type="submit"]:hover {
 }
 i {
   color: var(--small-text-color);
+  cursor: pointer;
 }
 img {
   width: 80px;

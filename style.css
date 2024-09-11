@@ -50,3 +50,6 @@ input[type="submit"]:hover {
   background-color: var(--font-color);
   color: var(--container-bg);
 }
+i {
+  color: var(--small-text-color);
+}

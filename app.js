@@ -6,7 +6,12 @@ searchBtn.addEventListener("click", searchProfile);
 function searchProfile(event) {
   event.preventDefault();
   let inputValue = document.getElementById("input");
-  findProfile(inputValue.value);
+  if (!inputValue.value) {
+    alert("Please enter Username first");
+  } else {
+    findProfile(inputValue.value);
+  }
+
   inputValue.value = "";
 }
 

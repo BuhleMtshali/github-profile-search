@@ -18,8 +18,28 @@ function searchProfile(event) {
 //function for api fetch call
 function findProfile(profile) {
   let apiUrl = `https://api.github.com/users/${profile}`;
-  axios.get(apiUrl).then(renderProfile);
+  axios
+    .get(apiUrl)
+    .then(renderProfile)
+    .catch((error) => {
+      alert("User not found! Please enter a valid username.");
+    });
 }
+//function to clear the profile info
+/*function clearProfile() {
+  document.getElementById("profile-pic").src = "";
+  document.getElementById("username-id").innerText = "";
+  document.getElementById("handle").innerText = "";
+  document.getElementById("date-joined").innerText = "";
+  document.getElementById("bio-text").innerText = "";
+  document.getElementById("repos").innerText = "0";
+  document.getElementById("followers").innerText = "0";
+  document.getElementById("following").innerText = "0";
+  document.getElementById("city").innerText = "No location provided";
+  document.getElementById("link").innerText = "";
+  document.getElementById("twitter").innerText = "Not Available";
+  document.getElementById("linkedin").innerText = "Not Available";
+}*/
 
 //render function
 function renderProfile(response) {
@@ -36,6 +56,7 @@ function renderProfile(response) {
   let twitterElement = document.getElementById("twitter");
   let linkedinElement = document.getElementById("linkedin");
   console.log(response.data);
+
   profilePic.src = response.data.avatar_url;
   userName.innerText = response.data.login;
   handle.innerText = response.data.name;

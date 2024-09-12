@@ -1,12 +1,13 @@
 //search function
 const searchBtn = document.getElementById("submitBtn");
-searchBtn.addEventListener("submit", searchProfile);
+searchBtn.addEventListener("click", searchProfile);
 
 //profile for input value which will call the api function
 function searchProfile(event) {
   event.preventDefault();
-  let inputValue = document.getElementById("input").value;
-  findProfile(inputValue);
+  let inputValue = document.getElementById("input");
+  findProfile(inputValue.value);
+  inputValue.value = "";
 }
 
 //function for api fetch call
@@ -29,4 +30,37 @@ function renderProfile(response) {
   let githubLink = document.getElementById("link");
   let twitterElement = document.getElementById("twitter");
   let linkedinElement = document.getElementById("linkedin");
+  console.log(response.data);
+  userName.innerText = response.data.login;
+  handle.innerText = response.data.name;
+  dateJoined.innerText = response.data.created_at;
+  reposTotal.innerText = response.data.public_repos;
+  followersTotal.innerText = response.data.followers;
+  followingTotal.innerText = response.data.following;
+  githubLink.innerText = response.data.html_url;
+  //if else for bio text
+  if (response.data.bio === null) {
+    bioText.innerText = `This profile has no bio`;
+  } else {
+    bioText.innerText = response.data.bio;
+  }
+  //if else for location
+
+  if (response.data.location === null) {
+    locationElement.innerText = `No location provided`;
+  } else {
+    locationElement.innerText = response.data.location;
+  }
+  //if for twitter
+  if (response.data.twitter_username) {
+    twitterElement.innerText = response.data.twitter_username;
+  } else {
+    twitterElement.innerText = `Not Available`;
+  }
+  //linkedin if else
+  if (response.data.email) {
+    linkedinElement.innerText = response.data.email;
+  } else {
+    linkedinElement.innerText = `Not Available`;
+  }
 }

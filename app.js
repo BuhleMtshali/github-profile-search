@@ -3,9 +3,9 @@ const searchBtn = document.getElementById("submitBtn");
 searchBtn.addEventListener("click", searchProfile);
 
 //profile for input value which will call the api function
+let inputValue = document.getElementById("input");
 function searchProfile(event) {
   event.preventDefault();
-  let inputValue = document.getElementById("input");
   if (!inputValue.value) {
     alert("Please enter Username first");
   } else {
@@ -98,3 +98,34 @@ function renderProfile(response) {
     linkedinElement.innerText = `Not Available`;
   }
 }
+
+//changing theme functions
+// Changing theme functions
+let searchContainer = document.getElementById("search-container");
+let container = document.getElementById("container");
+let modeBtn = document.getElementById("mode");
+let themeText = document.getElementById("theme-text");
+let isDarkmode = false;
+
+modeBtn.addEventListener("click", () => {
+  // Toggling the theme
+  document.body.classList.toggle("dark-mode");
+
+  // Updating the button icon and tracking theme state
+  if (isDarkmode) {
+    themeText.innerText = "Dark"; // Change text to "Dark"
+    modeBtn.classList.remove("fa-sun");
+    modeBtn.classList.add("fa-moon");
+    isDarkmode = false;
+  } else {
+    themeText.innerText = "Light"; // Change text to "Light"
+    modeBtn.classList.remove("fa-moon");
+    modeBtn.classList.add("fa-sun");
+    searchContainer.style.backgroundColor = "#FEFEFF";
+    inputValue.style.backgroundColor = "#FEFEFF";
+    inputValue.style.color = "#515559";
+    container.style.backgroundColor = "#FEFEFF";
+    container.style.color = "#6C6D72";
+    isDarkmode = true;
+  }
+});

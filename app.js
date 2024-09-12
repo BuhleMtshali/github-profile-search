@@ -31,6 +31,7 @@ function renderProfile(response) {
   let twitterElement = document.getElementById("twitter");
   let linkedinElement = document.getElementById("linkedin");
   console.log(response.data);
+  profilePic.src = response.data.avatar_url;
   userName.innerText = response.data.login;
   handle.innerText = response.data.name;
   //dateJoined.innerText = response.data.created_at;

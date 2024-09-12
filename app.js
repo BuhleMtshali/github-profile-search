@@ -102,7 +102,11 @@ function renderProfile(response) {
 //changing theme functions
 // Changing theme functions
 let searchContainer = document.getElementById("search-container");
+let devtText = document.getElementById("devtText");
 let container = document.getElementById("container");
+let reposTotal = document.getElementById("repos");
+let followersTotal = document.getElementById("followers");
+let followingTotal = document.getElementById("following");
 let modeBtn = document.getElementById("mode");
 let themeText = document.getElementById("theme-text");
 let isDarkmode = false;
@@ -110,12 +114,22 @@ let isDarkmode = false;
 modeBtn.addEventListener("click", () => {
   // Toggling the theme
   document.body.classList.toggle("dark-mode");
-
   // Updating the button icon and tracking theme state
   if (isDarkmode) {
     themeText.innerText = "Dark"; // Change text to "Dark"
     modeBtn.classList.remove("fa-sun");
     modeBtn.classList.add("fa-moon");
+    searchContainer.style.backgroundColor = "#1F2A48";
+    container.style.backgroundColor = "#1F2A48";
+    inputValue.style.backgroundColor = "#1F2A48";
+    devtText.style.color = "#a8afbf";
+    inputValue.style.color = "#a8afbf";
+    container.style.color = "#a8afbf";
+    themeText.style.color = "#a8afbf";
+    reposTotal.style.color = "white";
+    followersTotal.style.color = "white";
+    followingTotal.style.color = "white";
+    document.querySelector("body").style.backgroundColor = "";
     isDarkmode = false;
   } else {
     themeText.innerText = "Light"; // Change text to "Light"
@@ -125,7 +139,13 @@ modeBtn.addEventListener("click", () => {
     inputValue.style.backgroundColor = "#FEFEFF";
     inputValue.style.color = "#515559";
     container.style.backgroundColor = "#FEFEFF";
-    container.style.color = "#6C6D72";
+    container.style.color = "black";
+    reposTotal.style.color = "#6C6D72";
+    followersTotal.style.color = "#6C6D72";
+    followingTotal.style.color = "#6C6D72";
+    themeText.style.color = "black";
+    document.querySelector("body").style.backgroundColor = "#F5F8FF";
+    devtText.style.color = "black";
     isDarkmode = true;
   }
 });

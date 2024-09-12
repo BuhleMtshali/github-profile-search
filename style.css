@@ -17,18 +17,18 @@ body {
   color: var(--font-color);
 }
 .container {
-  width: 400px;
+  width: 500px;
   margin: 0 auto;
   background-color: var(--container-bg);
 }
 .search-container {
-  width: 400px;
+  width: 500px;
   margin: 0 auto;
   background-color: var(--container-bg);
   border-radius: 9px;
 }
 .top {
-  width: 400px;
+  width: 500px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@ body {
   padding: 10px 15px;
 }
 .container {
-  width: 400px;
+  width: 500px;
   margin-top: 15px;
   padding: 10px 15px;
   border-radius: 9px;

@@ -33,7 +33,14 @@ function renderProfile(response) {
   console.log(response.data);
   userName.innerText = response.data.login;
   handle.innerText = response.data.name;
-  dateJoined.innerText = response.data.created_at;
+  //dateJoined.innerText = response.data.created_at;
+  //formating the date
+  let joinedDate = new Date(response.data.created_at);
+  let options = { year: "numeric", month: "long", day: "numeric" };
+  dateJoined.innerText = `Joined ${joinedDate.toLocaleDateString(
+    "en-us",
+    options
+  )}`;
   reposTotal.innerText = response.data.public_repos;
   followersTotal.innerText = response.data.followers;
   followingTotal.innerText = response.data.following;

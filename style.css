@@ -53,6 +53,8 @@ body {
 input[type="search"] {
   background-color: var(--container-bg);
   border: none;
+  color: var(--font-color);
+  padding: 4px 5px;
 }
 input[type="submit"] {
   background-color: var(--small-text-color);
